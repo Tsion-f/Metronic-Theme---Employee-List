@@ -1,0 +1,340 @@
+<!-- Dashboard -->
+<div class="menu-item me-lg-1">
+  <a class="menu-link py-3" routerLinkActive="active" routerLink="/dashboard"
+  ><span class="menu-title" translate="MENU.DASHBOARD"></span
+  ></a>
+</div>
+
+<!-- Employee -->
+<div
+  class="menu-item menu-lg-down-accordion me-lg-1 menu-dropdown"
+  data-kt-menu-trigger="click"
+  data-kt-menu-placement="bottom-start">
+    <!-- Employee -->
+  <span class="menu-link py-3" [ngClass]="calculateMenuItemCssClass('/Employee')">
+    <span class="menu-title">Employees</span>
+    <span class="menu-arrow d-lg-none"></span>
+  </span>
+    <!-- Holding all the lists -->
+  <div
+    class="
+      menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0
+      py-lg-4
+      w-lg-225px
+    "
+    data-kt-menu-dismiss="true"
+    data-popper-placement="bottom-start"
+  >
+      <!-- Employee List -->
+      <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+      routerLink="/Employee"
+    >
+      <span
+        class="menu-link py-3">
+
+      <span class="menu-icon"><i class="bi fs-3 bi-person"></i></span
+      ><span class="menu-title" data-link="/crafted/account">Employee Lists</span
+      >
+      </span>
+
+      </div>
+
+      <div
+    class="menu-item menu-lg-down-accordion me-lg-1"
+    data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+    data-kt-menu-placement="right-start"
+   routerLink="/AddEmployee"
+  >
+    <span
+      class="menu-link py-3">
+
+    <span
+    class="menu-icon"
+    [inlineSVG]="'./assets/media/icons/duotune/arrows/arr075.svg'"></span>
+    <span class="menu-title" data-link="/crafted/account">Add Employee</span>
+    </span>
+      </div>
+  </div>
+</div>
+
+
+<!-- Department -->
+<div class="menu-item me-lg-1">
+  <a class="menu-link py-3" routerLink="/Role">
+    <span class="menu-title">Department</span></a>
+</div>
+
+<!-- Attendance -->
+<div class="menu-item me-lg-1">
+  <a class="menu-link py-3" routerLink="/Attendance">
+    <span class="menu-title"> Attendance</span></a>
+</div>
+
+<!-- Team -->
+<div class="menu-item me-lg-1">
+  <a class="menu-link py-3" routerLink="/Team">
+    <span class="menu-title">Leave Management</span></a>
+</div>
+
+<!-- To be deleted -->
+<div class="menu-item me-lg-1">
+  <a class="menu-link py-3" routerLink="/Abnet">
+    <span class="menu-title"> TBD</span></a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Apps -->
+<!-- <div
+  class="menu-item menu-lg-down-accordion me-lg-1"
+  data-kt-menu-trigger="click"
+  data-kt-menu-placement="bottom-start"
+>
+  <span class="menu-link py-3" [ngClass]="calculateMenuItemCssClass('/apps')">
+    <span class="menu-title">Apps</span>
+    <span class="menu-arrow d-lg-none"></span>
+  </span>
+  <div
+    class="
+      menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0
+      py-lg-4
+      w-lg-225px
+    "
+    data-kt-menu-dismiss="true"
+  >
+    <div
+      class="menu-item menu-lg-down-accordion me-lg-1"
+      data-kt-menu-trigger="{default:'click', lg: 'hover'}"
+      data-kt-menu-placement="right-start"
+    >
+      <span
+        class="menu-link py-3"
+        [ngClass]="calculateMenuItemCssClass('/apps/chat')"
+      ><span class="menu-icon"
+      ><span
+        class="svg-icon svg-icon-2"
+        [inlineSVG]="'./assets/media/icons/duotune/general/gen022.svg'"
+      ></span></span
+      ><span class="menu-title" data-link="/apps/chat">Chat</span
+      ><span class="menu-arrow"></span
+      ></span>
+      <div
+        class="
+          menu-sub
+          menu-sub-lg-down-accordion
+          menu-sub-lg-dropdown
+          menu-rounded-0
+          py-lg-4
+          w-lg-225px
+        "
+        data-kt-menu-dismiss="true"
+      >
+        <div class="menu-item me-lg-1">
+          <a
+            class="menu-link py-3"
+            routerLinkActive="active"
+            routerLink="/apps/chat/private-chat"
+          ><span class="menu-bullet"
+          ><span class="bullet bullet-dot"></span></span
+          ><span class="menu-title">Private Chat</span></a
+          >
+        </div>
+        <div class="menu-item me-lg-1">
+          <a
+            class="menu-link py-3"
+            routerLinkActive="active"
+            routerLink="/apps/chat/group-chat"
+          ><span class="menu-bullet"
+          ><span class="bullet bullet-dot"></span></span
+          ><span class="menu-title">Group Chart</span></a
+          >
+        </div>
+        <div class="menu-item me-lg-1">
+          <a
+            class="menu-link py-3"
+            routerLinkActive="active"
+            routerLink="/apps/chat/drawer-chat"
+          ><span class="menu-bullet"
+          ><span class="bullet bullet-dot"></span></span
+          ><span class="menu-title">Drawer Chart</span></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!-- MegaMenu -->
+<!-- <div
+  class="menu-item menu-lg-down-accordion me-lg-1"
+  data-kt-menu-trigger="click"
+  data-kt-menu-placement="bottom-start"
+>
+  <span class="menu-link py-3">
+    <span class="menu-title">Mega menu</span>
+    <span class="menu-arrow d-lg-none"></span>
+  </span>
+  <div
+    class="
+      menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown
+      w-100 w-lg-600px
+      p-5 p-lg-5
+    "
+    data-kt-menu-dismiss="true"
+  >
+    <div class="row" data-kt-menu-dismiss="true">
+      <div class="col-lg-4 border-left-lg-1">
+        <div class="menu-inline menu-column menu-active-bg">
+          <div class="menu-item">
+            <a class="menu-link cursor-pointer"
+            ><span class="menu-bullet"
+            ><span class="bullet bullet-dot"></span></span
+            ><span class="menu-title">Example link</span></a
+            >
+          </div>
+          <div class="menu-item">
+            <a class="menu-link cursor-pointer"
+            ><span class="menu-bullet"
+            ><span class="bullet bullet-dot"></span></span
+            ><span class="menu-title">Example link</span></a
+            >
+          </div>
+          <div class="menu-item">
+            <a class="menu-link cursor-pointer"
+            ><span class="menu-bullet"
+            ><span class="bullet bullet-dot"></span></span
+            ><span class="menu-title">Example link</span></a
+            >
+          </div>
+          <div class="menu-item">
+            <a class="menu-link cursor-pointer"
+            ><span class="menu-bullet"
+            ><span class="bullet bullet-dot"></span></span
+            ><span class="menu-title">Example link</span></a
+            >
+          </div>
+          <div class="menu-item">
+            <a class="menu-link cursor-pointer"
+            ><span class="menu-bullet"
+            ><span class="bullet bullet-dot"></span></span
+            ><span class="menu-title">Example link</span></a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 border-left-lg-1">
+        <div class="menu-inline menu-column menu-active-bg">
+          <div class="menu-item">
+            <a class="menu-link cursor-pointer"
+            ><span class="menu-bullet"
+            ><span class="bullet bullet-dot"></span></span
+            ><span class="menu-title">Example link</span></a
+            >
+          </div>
+          <div class="menu-item">
+            <a class="menu-link cursor-pointer"
+            ><span class="menu-bullet"
+            ><span class="bullet bullet-dot"></span></span
+            ><span class="menu-title">Example link</span></a
+            >
+          </div>
+          <div class="menu-item">
+            <a class="menu-link cursor-pointer"
+            ><span class="menu-bullet"
+            ><span class="bullet bullet-dot"></span></span
+            ><span class="menu-title">Example link</span></a
+            >
+          </div>
+          <div class="menu-item">
+            <a class="menu-link cursor-pointer"
+            ><span class="menu-bullet"
+            ><span class="bullet bullet-dot"></span></span
+            ><span class="menu-title">Example link</span></a
+            >
+          </div>
+          <div class="menu-item">
+            <a class="menu-link cursor-pointer"
+            ><span class="menu-bullet"
+            ><span class="bullet bullet-dot"></span></span
+            ><span class="menu-title">Example link</span></a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 border-left-lg-1">
+        <div class="menu-inline menu-column menu-active-bg">
+          <div class="menu-item">
+            <a class="menu-link cursor-pointer"
+            ><span class="menu-bullet"
+            ><span class="bullet bullet-dot"></span></span
+            ><span class="menu-title">Example link</span></a
+            >
+          </div>
+          <div class="menu-item">
+            <a class="menu-link cursor-pointer"
+            ><span class="menu-bullet"
+            ><span class="bullet bullet-dot"></span></span
+            ><span class="menu-title">Example link</span></a
+            >
+          </div>
+          <div class="menu-item">
+            <a class="menu-link cursor-pointer"
+            ><span class="menu-bullet"
+            ><span class="bullet bullet-dot"></span></span
+            ><span class="menu-title">Example link</span></a
+            >
+          </div>
+          <div class="menu-item">
+            <a class="menu-link cursor-pointer"
+            ><span class="menu-bullet"
+            ><span class="bullet bullet-dot"></span></span
+            ><span class="menu-title">Example link</span></a
+            >
+          </div>
+          <div class="menu-item">
+            <a class="menu-link cursor-pointer"
+            ><span class="menu-bullet"
+            ><span class="bullet bullet-dot"></span></span
+            ><span class="menu-title">Example link</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

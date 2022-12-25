@@ -1,0 +1,62 @@
+<!-- <div class="d-flex flex-wrap flex-stack mb-6">
+  <h3 class="fw-bolder text-gray-400 my-2">
+   Employees
+    <span class="fs-6 text-gray-400 fw-bold ms-1">Details</span>
+  </h3>
+
+ <div class="d-flex my-2">
+    <select class="form-select form-select-white form-select-sm w-125px" >
+      <option value="Online" *ngFor="let item of Department">{{item}}</option>
+    </select>
+  </div>
+</div>
+
+ <div class="row g-6 g-xl-9">
+  <div class="col-md-6 col-xxl-4" *ngFor="let item of Employees">
+    <app-card3
+      avatar="./assets/media/avatars/300-6.jpg"
+      avgEarnings="$14,560"
+      totalEarnings="$236,400">
+    </app-card3>
+  </div>
+</div>
+
+ -->
+
+
+
+
+    <div class="row
+                row-cols-1
+                row-cols-md-2
+                row-cols-xl-2
+                g-5 g-xl-9">
+
+      <div class="col-md-8" *ngFor="let item of Employees">
+        <!--begin::Card-->
+        <div class="card card-flush h-md-100">
+
+            <div [ngStyle]="{'text-align':'center'}">
+                <h2 >{{item.FirstName}}</h2>
+            </div>
+          <!--end::Card header-->
+
+             <!--begin::Card body-->
+             <div class="card-body pt-1" [ngStyle]="{'text-align':'center','color':'silver'}">
+              <a  >{{item.Department}}</a>
+            </div>
+
+            <!-- Card footer-->
+            <div class="card-footer flex-wrap pt-0" [ngStyle]="{'text-align':'center'}" >
+              <a class="btn btn-sm btn-light cursor-pointer">
+                <span
+                  [inlineSVG]="'./assets/media/icons/duotune/arrows/arr075.svg'"
+                  class="svg-icon svg-icon-3"
+                ></span>
+                Performance
+              </a>
+            </div>
+        </div>
+        <!-- End:: -->
+      </div>
+</div>

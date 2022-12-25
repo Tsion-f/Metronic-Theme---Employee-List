@@ -1,0 +1,29 @@
+
+<div class="example-preview"></div>
+<div class="modal-header">
+<h1 mat-dialog-title  [ngStyle]="{'color':'lightBlue','text-align':'center'}"><b>Employee Information</b></h1>
+</div>
+		<div mat-dialog-content >
+      <div class="modal-body">
+        <div [ngStyle]="{'text-align':'center'}" class="symbol symbol-45px me-5">
+          <img src="./assets/media/avatars/300-14.jpg" alt="" />
+          <h5 ><b> {{detail.name}}</b> is the coolest!</h5>
+        </div>
+      <br>
+      <p>
+       <b>ID</b>: {{detail.id}}<br>
+        <b>user name</b>:{{detail.username}}<br>
+        <b>phone</b>: {{detail.phone}}<br>
+        <b>Email</b>: {{detail.email}}<br>
+        <b> name</b>: {{detail.name}}<br>
+        <b> Website</b>: {{detail.website}}<br>
+      </p>
+		</div>
+    </div>
+
+    <!-- To addd closing to the modal -->
+		<div mat-dialog-actions>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+      </div>
+		</div>

@@ -1,0 +1,175 @@
+<!-- begin::Header -->
+<div class="row g-5 g-xl-8">
+  <div class="card mb-5 mb-xl-10">
+<div class="card-header border-0 pt-5">
+  <h3 class="card-title align-items-start flex-column">
+    <span class="card-label fw-bolder fs-3 mb-1">Attendance Sheet</span>
+  </h3>
+  <div class="card-toolbar">
+
+    <div class="card-toolbar">
+      <ul class="nav">
+        <li class="nav-item">
+          <a
+            class="
+              nav-link
+              btn btn-sm btn-color-muted btn-active btn-active-light-primary
+              fw-bolder
+              px-4
+              me-1
+            "
+            data-bs-toggle="tab"
+
+          >
+            Day
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="
+              nav-link
+              btn btn-sm btn-color-muted btn-active btn-active-light-primary
+              fw-bolder
+              px-4
+              me-1
+            "
+            data-bs-toggle="tab"
+
+          >
+            Week
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="
+              nav-link
+              btn btn-sm btn-color-muted btn-active btn-active-light-primary
+              fw-bolder
+              px-4
+            "
+            data-bs-toggle="tab"
+
+          >
+            Month
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- end::Header -->
+
+
+<!-- begin::Body -->
+<div class="card-body py-3">
+  <!-- begin::Table container -->
+  <div class="table-responsive">
+    <!-- begin::Table -->
+
+    <table
+      class="table table-row-bordered table-row-gray-100 align-middle gs-0 gy-3"
+    >
+      <!-- begin::Table head -->
+      <thead>
+        <tr class="fw-bolder text-muted">
+            <!-- <th> -->
+              <!-- <input type="checkbox" (change)="checkUncheckAll()" [(ngModel)]="masterSelected"
+              name="list_name" value="m1"
+              >
+            </th> -->
+          <th class="min-w-150px"> EId</th>
+          <th class="min-w-140px">Employee Name</th>
+          <th class="min-w-120px">Department</th>
+          <th class="min-w-120px">Date</th>
+          <th class="min-w-120px">Entry Time</th>
+          <th class="min-w-120px">Exit Time</th>
+          <th class="min-w-120px">Status</th>
+          <th class="min-w-100px text-end">Actions</th>
+        </tr>
+      </thead>
+      <!-- end::Table head -->
+      <!-- begin::Table body -->
+      <tbody>
+        <tr *ngFor="let Employee of Employees">
+            <td>
+              <!-- <input type="checkbox" (change)="isAllSelected()" [(ngModel)]="Employee.isSelected"
+              name="list_name" value="{{Employee.id}}"
+              > -->
+            </td>
+          <td>
+            <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+             {{Employee.id}}
+            </a>
+          </td>
+          <td>
+            <a
+              href="#"
+              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
+            >
+             {{Employee.FirstName}}
+            </a>
+          </td>
+          <td>
+            <a
+              href="#"
+              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
+            >
+              {{Employee.Department}}
+            </a>
+          </td>
+
+          <td>
+            <a
+              href="#"
+              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
+            >
+              10/02/2022
+            </a>
+          </td>
+
+          <td class="text-dark fw-bolder text-hover-primary fs-6">
+             {{Employee.EntryTime}}
+          </td>
+          <td>
+            <a
+              href="#"
+              class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6"
+            >
+              {{Employee.ExitTime}}
+            </a>
+
+          </td>
+
+          <td>
+            <span class="badge badge-light-success">On Time</span>
+          </td>
+          <td class="text-end">
+            <a
+              href="#"
+              class="
+                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                me-1
+              "
+            >
+              <span
+                [inlineSVG]="'./assets/media/icons/duotune/art/art005.svg'"
+                class="svg-icon svg-icon-3"
+              ></span>
+            </a>
+          </td>
+        </tr>
+
+
+      </tbody>
+      <!-- end::Table body -->
+    </table>
+    <!-- end::Table -->
+
+
+  </div>
+  <!-- end::Table container -->
+</div>
+<!-- begin::Body -->
+</div>
+
+</div>

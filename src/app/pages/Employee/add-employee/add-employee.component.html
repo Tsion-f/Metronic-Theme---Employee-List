@@ -1,0 +1,177 @@
+<div class="card mb-5 mb-xl-8">
+
+<div class="card mb-5 mb-xl-10">
+  <div
+    class="card-header border-0 cursor-pointer"
+    role="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#kt_account_profile_details"
+    aria-expanded="true"
+    aria-controls="kt_account_profile_details"
+  >
+    <div class="card-title m-0">
+      <h3 class="fw-bolder m-0" [ngStyle]="{'color':'lightBlue'}">Add New Employee</h3>
+    </div>
+
+    <div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-roles-modal-action="close">
+      <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+      <span class="svg-icon svg-icon-1">
+        <svg (click)="closeForm()" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+          <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+        </svg>
+      </span>
+      <!--end::Svg Icon-->
+    </div>
+  </div>
+
+  <div id="kt_account_profile_details" class="collapse show">
+    <form novalidate="" class="form" [formGroup]="AddEForm">
+
+      <div class="card-body border-top p-9">
+
+        <div class="row mb-6">
+          <label class="col-lg-4 col-form-label fw-bold fs-6">
+            <span class="required">Name</span></label>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <input matInput placeholder="Name" formControlName="name"
+              [errorStateMatcher]="matcher">
+            <mat-error *ngIf="AddEForm.hasError('name') && !AddEForm.hasError('required')">
+              Please enter a valid Name
+            </mat-error>
+            <mat-error *ngIf="AddEForm.hasError('required')">
+              Name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+
+        <div class="row mb-6">
+          <label class="col-lg-4 col-form-label fw-bold fs-6">
+            <span class="required">User Name</span></label>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <input matInput placeholder="User Name" formControlName="username"
+              [errorStateMatcher]="matcher">
+            <mat-error *ngIf="AddEForm.hasError('username') && !AddEForm.hasError('required')">
+              Please enter a valid User Name
+            </mat-error>
+            <mat-error *ngIf="AddEForm.hasError('required')">
+              User Name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+
+        <div class="row mb-6">
+          <label class="col-lg-4 col-form-label fw-bold fs-6"
+            ><span class="required">Contact Phone</span></label>
+            <mat-form-field appearance="outline" class="example-full-width">
+              <input matInput placeholder="Phone" formControlName="phone"
+                [errorStateMatcher]="matcher">
+              <mat-error *ngIf="AddEForm.hasError('phone') && !AddEForm.hasError('required')">
+                Please enter a valid User Name
+              </mat-error>
+              <mat-error *ngIf="AddEForm.hasError('required')">
+                User Name is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+
+          <!-- Trying mat-form-field for Validation of email input -->
+            <div class="row mb-6">
+            <label class="col-lg-4 col-form-label fw-bold fs-6">
+            <span class="required">Email</span></label>
+
+            <mat-form-field appearance="outline" class="example-full-width">
+            <input matInput placeholder="Email" formControlName="email">
+
+            <mat-error *ngIf="AddEForm.hasError('email') && !AddEForm.hasError('required')">
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="AddEForm.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error>
+            </mat-form-field>
+            </div>
+
+            <div class="row mb-6">
+              <label class="col-lg-4 col-form-label fw-bold fs-6">
+                <span class="required">Company Website</span></label>
+              <mat-form-field appearance="outline" class="example-full-width">
+                <input matInput
+                placeholder="Website" formControlName="website"
+                [errorStateMatcher]="matcher">
+              <mat-error *ngIf="AddEForm.hasError('website') && !AddEForm.hasError('required')">
+                Please enter a valid User Name
+              </mat-error>
+              <mat-error *ngIf="AddEForm.hasError('required')">
+                User Name is <strong>required</strong>
+              </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="row mb-6">
+              <label class="col-lg-4 col-form-label fw-bold fs-6">
+                <span class="required">Department</span></label>
+
+
+                <!-- Easy way to do Multiple Select -->
+                <ng-select
+                         [items]="Department"
+                         bindLabel="name"
+                         placeholder="Select Department"
+                         [multiple]="true">
+                </ng-select>
+            </div>
+
+            
+
+      <div class="card-footer d-flex justify-content-end py-6 px-9">
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="AddEmployee(AddEForm.value)"
+          >
+        Submit
+        </button>
+      </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="row mb-6">
+  <label class="col-lg-4 col-form-label fw-bold fs-6">
+    <span class="required">Company Website</span></label>
+  <mat-form-field class="example-full-width">
+<ng-select
+ matInput
+  [items]="Department"
+  bindLabel="name"
+  placeholder="Select Department"
+  appendTo="body"
+  [multiple]="true">
+</ng-select>
+</mat-form-field>
+</div>
+</div> -->
+
+
+
+
+
+
+
